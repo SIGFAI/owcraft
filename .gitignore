@@ -1,0 +1,11 @@
+bin/
+obj/
+*.user
+.vs/
+# Never commit game files, decompiles or Minecraft assets.
+*.decompiled.cs
+# Installers and profiles that live next to the project locally.
+*.exe
+OWML/
+*.jfr
+release/
