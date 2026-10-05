@@ -1,0 +1,132 @@
+{
+  "id": "sigf/owcraft",
+  "version": "0.1.1",
+  "name": "OWCraft",
+  "tagline": "Real Minecraft on Outer Wilds planets: land, press F6 and break, place, craft and light TNT on Timber Hearth. Your builds stay through every time loop.",
+  "kind": "passthrough",
+  "games": [
+    {
+      "game": "outerwilds",
+      "role": "host",
+      "label": "Outer Wilds",
+      "engine": "Outer Wilds (Unity, Mono) + OWML mod (C#)",
+      "apps": {
+        "steam": "753640"
+      },
+      "runtime": "current Steam build (upstream pins none), OWML 2.16.3",
+      "mode": "single-player only"
+    },
+    {
+      "game": "minecraft",
+      "role": "guest",
+      "label": "Minecraft",
+      "engine": "Minecraft Java 26.3 + SkyCraft Fabric mod with the OWCraft patch (Java)",
+      "mc": "26.3",
+      "loader": "fabric@0.19.5",
+      "java": "25"
+    }
+  ],
+  "requires": [
+    {
+      "id": "owml",
+      "version": "2.16.3",
+      "page": "https://outerwildsmods.com/mod-manager/",
+      "license": "MIT; the Mod Manager installs and updates it",
+      "note": "install the Outer Wilds Mod Manager and start Outer Wilds from it once: OWML patches the game each time the Mod Manager starts it"
+    },
+    {
+      "id": "fabric-loader",
+      "version": "0.19.5"
+    },
+    {
+      "id": "fabric-api",
+      "version": "0.161.0+26.3",
+      "note": "in the Minecraft pack (downloaded from Modrinth)"
+    }
+  ],
+  "install": [
+    {
+      "game": "outerwilds",
+      "strategy": "profile",
+      "loader": "owml",
+      "files": [
+        {
+          "src": "Yaekai.OWCraft-0.1.1.zip",
+          "dst": "{app}/Yaekai.OWCraft-0.1.1.zip",
+          "unpack": false,
+          "url": "https://github.com/SIGFAI/owcraft/releases/download/v0.1.1/Yaekai.OWCraft-0.1.1.zip",
+          "sha256": "927f96588f2f1f6b89aad386e5a3dfebed119d6866cb48f71b711d3f442d9a28",
+          "size": 44755
+        }
+      ]
+    },
+    {
+      "game": "minecraft",
+      "strategy": "mrpack",
+      "pack": {
+        "src": "owcraft.mrpack",
+        "url": "https://github.com/SIGFAI/owcraft/releases/download/v0.1.1/owcraft.mrpack",
+        "sha256": "ac94b71ca0e52c0f81f05fbf46d9aa22a842247996c1b4194733de00cb2a44cd",
+        "size": 247868
+      }
+    }
+  ],
+  "launch": [
+    {
+      "game": "minecraft"
+    }
+  ],
+  "files": [
+    {
+      "name": "Yaekai.OWCraft-0.1.1.zip",
+      "url": "https://github.com/SIGFAI/owcraft/releases/download/v0.1.1/Yaekai.OWCraft-0.1.1.zip",
+      "sha256": "927f96588f2f1f6b89aad386e5a3dfebed119d6866cb48f71b711d3f442d9a28",
+      "size": 44755
+    },
+    {
+      "name": "owcraft.mrpack",
+      "url": "https://github.com/SIGFAI/owcraft/releases/download/v0.1.1/owcraft.mrpack",
+      "sha256": "ac94b71ca0e52c0f81f05fbf46d9aa22a842247996c1b4194733de00cb2a44cd",
+      "size": 247868
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/Yaekai/OWCraft",
+    "license": "MIT",
+    "upstream_license": "MIT",
+    "tag": "v0.1.1",
+    "commit": "cd5f0613e1de04c537e7db28a5813b0329cfbfa9",
+    "hosted": "https://github.com/SIGFAI/owcraft",
+    "based_on": "https://github.com/chasmlol/SkyCraft",
+    "bundled": [
+      {
+        "name": "SkyCraft (Fabric mod, OWCraft patch)",
+        "version": "0.1.2",
+        "repo": "https://github.com/chasmlol/SkyCraft",
+        "commit": "bfcaf178524b92c2cdeb88e4ce0f13ef9ded6f32",
+        "license": "MIT"
+      }
+    ]
+  },
+  "media": {},
+  "built_by": {
+    "author": "Yaekai",
+    "authors": [
+      "Yaekai",
+      "chasmlol"
+    ],
+    "packaged_by": "SIGF"
+  },
+  "idea_by": "Yaekai",
+  "built_at": "2026-10-05T00:00:00.000Z",
+  "status": "beta",
+  "issues": "https://github.com/Yaekai/OWCraft/issues",
+  "notes": [
+    "You need both games: Outer Wilds on Steam (Windows) and Minecraft: Java Edition. Single-player only.",
+    "One step by hand, once: install the Outer Wilds Mod Manager (https://outerwildsmods.com/mod-manager/), then in it choose Install From > Zip and pick Yaekai.OWCraft-0.1.1.zip from this mod's folder (Open folder in the app). It lands in %AppData%\\OuterWildsModManager\\OWML\\Mods\\Yaekai.OWCraft.",
+    "Press Play: Minecraft starts as the app's own Prism instance \"sigf-owcraft\" (Minecraft 26.3, Fabric Loader 0.19.5, Fabric API 0.161.0+26.3, Java 25). Then start Outer Wilds from the Mod Manager. Once they link, Minecraft opens its own void world; land on a planet and press F6.",
+    "Keys: F6 enters and leaves Minecraft mode, O opens Minecraft's menu, F5 third person, Esc pauses. Builds are saved in the Minecraft world and survive time loops.",
+    "Restore deletes the Minecraft instance and the zip copy; remove OWCraft from the Mod Manager yourself (it does not touch your Outer Wilds save).",
+    "Beta (\"experimental, but playable\", tested on one PC): translucent blocks are drawn opaque, the Outer Wilds player does not collide with placed blocks, no day/night sync. Report bugs to the author on the upstream issue tracker."
+  ]
+}
