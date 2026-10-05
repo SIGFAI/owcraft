@@ -3,6 +3,12 @@
   "version": "0.1.1",
   "name": "OWCraft",
   "tagline": "Real Minecraft on Outer Wilds planets: land, press F6 and break, place, craft and light TNT on Timber Hearth. Your builds stay through every time loop.",
+  "how_to_play": [
+    "Land on an Outer Wilds planet and play real Minecraft there; your builds stay through every time loop.",
+    "Press Play: Minecraft starts first; then start Outer Wilds from the Outer Wilds Mod Manager.",
+    "Once they link, land, stand on the ground and press F6 to enter or leave Minecraft mode.",
+    "O opens Minecraft's menu, F5 third person, Esc pauses Outer Wilds or closes a Minecraft screen."
+  ],
   "kind": "passthrough",
   "games": [
     {
