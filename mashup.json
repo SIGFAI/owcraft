@@ -4,10 +4,11 @@
   "name": "OWCraft",
   "tagline": "Real Minecraft on Outer Wilds planets: land, press F6 and break, place, craft and light TNT on Timber Hearth. Your builds stay through every time loop.",
   "how_to_play": [
-    "Land on an Outer Wilds planet and play real Minecraft there; your builds stay through every time loop.",
-    "Press Play: Minecraft starts first; then start Outer Wilds from the Outer Wilds Mod Manager.",
-    "Once they link, land, stand on the ground and press F6 to enter or leave Minecraft mode.",
-    "O opens Minecraft's menu, F5 third person, Esc pauses Outer Wilds or closes a Minecraft screen."
+    "Land on an Outer Wilds planet and play real Minecraft there: break and place blocks, open your inventory, light TNT. Builds stay through every time loop.",
+    "Press Play: Minecraft starts first. Then start Outer Wilds from the Outer Wilds Mod Manager.",
+    "Once they link, Minecraft opens its own void world; in Outer Wilds, land, stand on the ground and press F6.",
+    "F6 enters and leaves Minecraft mode, O opens Minecraft's menu, F5 third person, Esc pauses Outer Wilds or closes a Minecraft screen.",
+    "The keys can be changed in the Mod Manager's OWCraft settings."
   ],
   "kind": "passthrough",
   "games": [
@@ -128,9 +129,6 @@
   "status": "beta",
   "issues": "https://github.com/Yaekai/OWCraft/issues",
   "notes": [
-    "How it works: you play Outer Wilds, land on a planet and press F6 to play real Minecraft there: break and place blocks, open your inventory, light TNT. Your builds stay on the planet through every time loop.",
-    "To start: Play starts Minecraft first. Then start Outer Wilds from the Outer Wilds Mod Manager. Once they link, Minecraft opens its own void world; in Outer Wilds, land, stand on the ground and press F6.",
-    "Keys: F6 enters and leaves Minecraft mode, O opens Minecraft's menu, F5 switches to third person, Esc pauses Outer Wilds or closes a Minecraft screen. The keys can be changed in the Mod Manager's OWCraft settings.",
     "You need Outer Wilds on Steam (Windows) and Minecraft: Java Edition. Once, by hand: install the Outer Wilds Mod Manager, start Outer Wilds from it once, then choose Install From > Zip and pick Yaekai.OWCraft-0.1.1.zip from this mod's folder (Open folder in the app).",
     "Single player only. Restore deletes the Minecraft side and the zip copy; remove OWCraft in the Mod Manager yourself. Known limits: glass, water and ice look opaque, the Outer Wilds player does not collide with placed blocks, no day/night sync, no Nether.",
     "Beta (\"experimental, but playable\", tested on one PC): report bugs to the author with the Report a bug link."
