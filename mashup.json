@@ -131,6 +131,7 @@
   "notes": [
     "You need Outer Wilds on Steam (Windows) and Minecraft: Java Edition. Once, by hand: install the Outer Wilds Mod Manager, start Outer Wilds from it once, then choose Install From > Zip and pick Yaekai.OWCraft-0.1.1.zip from this mod's folder (Open folder in the app).",
     "Single player only. Restore deletes the Minecraft side and the zip copy; remove OWCraft in the Mod Manager yourself. Known limits: glass, water and ice look opaque, the Outer Wilds player does not collide with placed blocks, no day/night sync, no Nether.",
-    "Beta (\"experimental, but playable\", tested on one PC): report bugs to the author with the Report a bug link."
+    "Beta (\"experimental, but playable\", tested on one PC): report bugs to the author with the Report a bug link.",
+    "No free SIGF server for this mashup: OWCraft is single player, and its Minecraft mod (a SkyCraft fork) crashes on a hosted (Linux) server."
   ]
 }
